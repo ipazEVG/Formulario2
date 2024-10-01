@@ -1,0 +1,95 @@
+<!DOCTYPE html> <!--Elemento raíz del documento, define el tipo de documento-->
+<html>
+<head><!--Cabecera del documento. Contiene información que no es directamente el contenido de la página-->
+    <meta charset="UTF-8"> <!--Especifica la codificación de caracteres del documento-->
+    <title>Formulario2</title><!--Título de la página, que aparecerá en la pestaña del navegador-->
+    <link rel="stylesheet" href="EstilosFormulario2.css"><!--Link del estilo de la página-->
+</head>
+<body><!--Cuerpo del documento-->
+  
+  <header> <!--Encabezado del cuerpo del documento-->
+    <div class="encabezado"> <!--Elemento donde agruparemos el encabezado del documento-->
+      <div class="divImagen"> <!--Elemento donde agruparemos la imagen del documento-->
+        <img src="img\Designer (2).png" class="logo"> <!--Logo de la página-->
+      </div> 
+      <!--Elemento donde agruparemos el título del documento-->
+      <h1>SOS Planeta: Actúa Contra los Desastres Naturales.</h1><!--Título del documento-->
+      
+      <!--Contenido secundario donde agruparemos los botones del encabezado del documento-->
+      <aside>
+        <nav><!--Elemento de navegación donde agruparemos los botones del encabezado del documento-->
+          <!--Elemento para crear enlaces, creamos un enlace de tipo botón para la página de inicio-->
+          <a type="button" href="PaginaPrincipal.html" class="botonesnav">Inicio</a>
+
+          <!--Enlace de tipo botón para la página del formulario-->
+          <a type="button" href="Formulario_.html" class="botonesnav">Formulario</a>
+          
+        </nav> 
+       </aside>
+    </div>
+  </header>
+
+  <!--Párrafo introductorio con mensaje motivacional sobre el cambio climático-->
+  <p class="ptexto_intro">El cambio climático es un desafío global que requiere un esfuerzo colectivo. Ante desastres naturales, tu ayuda puede ser la esperanza que muchos necesitan. Al actuar con compasión y determinación, podemos enfrentar juntos estos retos, construir comunidades más fuertes y trabajar hacia un futuro más sostenible para todos. No subestimes el poder de tu acción; cada pequeño gesto cuenta y puede marcar la diferencia. ¡Juntos, podemos ser la fuerza del cambio! ¡Ayudanos!.
+  </p> <!--Fin del párrafo de texto-->
+  
+  <!--Inicio del formulario donde el usuario puede ingresar su información-->
+  <form name=”Ismael_f” action="datosformulario.php" accept-charset="UTF-8" method="get" ><!--Elemento formulario donde se recogen todos los campos-->
+    
+    <!--Campo de entrada para el nombre-->
+    <br><label for="Nombre">Nombre:</label> <!--Label es un elemento html que vincula textos a controles de formulario interactivos-->
+    <input type="text" id="Nombre" name="nombre" placeholder="Nombre" ><br><!--Campo de texto para introducir el nombre-->
+    
+    <!--Campo de entrada para los apellidos-->
+    <br><label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="Apellidos" placeholder="Apellidos"><br><!--Campo de texto para introducir los apellidos-->
+
+    <!--Campo de entrada para el DNI-->
+    <br><label for="DNi">DNI:</label>
+    <input type="text" id="DNI" name="DNI" placeholder="DNI"><br><!--Campo de texto para introducir el DNI-->
+    
+    <!--Menú desplegable para seleccionar el Genero-->
+    <br><label for="Genero">Genero:</label> <!--Etiqueta que describe el campo del menú desplegable-->
+    <select id="Genero"  name="Genero"> <!--Menú desplegable para seleccionar el sexo-->
+      <option>Masculino</option> <!--Opción para seleccionar "Hombre"-->
+      <option>Femenino</option> <!--Opción para seleccionar "Mujer"-->
+      <option>Otros</option> <!--Opción para seleccionar "Otros"-->
+    </select><br>
+
+    <!--Campo de grupo de opciones para seleccionar cómo le gustaría ayudar a la persona-->
+    <fieldset class="fieldsetpreguntas"><!--Agrupación de elementos para la selección de actividad de voluntariado-->
+      <legend class="divpregunta"> <!--Título del campo de selección-->
+        ¿Cómo te gustaría ayudar?
+      </legend>
+      
+      <!--Pregunta sobre el tipo de actividad de voluntariado-->
+      <p>¿Qué tipo de actividad te interesa?</p>
+      
+      <!--Checkbox para seleccionar diferentes opciones de ayuda-->
+      <p><input type="checkbox" name="actividad[]" value = "Limpieza">Limpieza de playas y parques.</p>
+      <p><input type="checkbox" name="actividad[]"value = "Plantación">Plantación de árboles.</p>
+      <p><input type="checkbox" name="actividad[]" value = "Educación">Educación y Concienciación.</p><!--Checkbox para opción de educación-->
+      <p><input type="checkbox" name="actividad[]" value = "Mantenimiento">Mantenimiento de rios.</p>
+    </fieldset>
+
+    <!--Campo de opción de aceptación de términos y condiciones-->
+    <p><input type="checkbox" name="condiciones[]" value="aceptado">Acepto los terminos y condiciones.</p><!--Campo tipo radio para aceptar condiciones-->
+
+    <!--Botón para enviar el formulario-->
+    <input type="submit" value="Enviar"></imput><!--Botón que simula el envío del formulario-->
+  </form>
+  
+  <!--Pie de página con información de contacto-->
+  <footer>
+    <h2>Ponte en contacto con nosotros.</h2> <!--Encabezado del pie de página-->
+    
+    <!--Lista de contacto con teléfono, correo electrónico y dirección física-->
+    <ul>
+      <li>Teléfono de contacto: +34698794972</li> <!--Número de contacto-->
+      <li>Correo electrónico: Ayudaalplaneta@gmail.com</li> <!--Correo de contacto-->
+      <li>Dirección física de nuestra sede: Calle Marmota Nº3, Madrid, España.</li> <!--Dirección física-->
+    </ul>
+  </footer>
+
+</body><!--Fin del cuerpo del Documento-->
+</html>
